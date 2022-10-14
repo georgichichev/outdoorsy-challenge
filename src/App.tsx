@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import './App.css';
 import SearchForm from "./components/SearchForm/SearchForm";
+import Rentals from "./components/Rentals/Rentals";
 
 function App() {
     const [keyword, setKeyword] = useState('');
@@ -13,6 +14,9 @@ function App() {
         <div className="container">
             <SearchForm
                 onInputChange={onInputChange}
+                keyword={keyword}
+            />
+            <Rentals
                 keyword={keyword}
             />
         </div>
