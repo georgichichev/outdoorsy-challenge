@@ -2,19 +2,23 @@ import React from "react";
 import styles from './SearchForm.module.css';
 
 interface SearchFormProps{
-    onInputChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+    onSearchFormSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
     keyword: string
 }
 
-const SearchForm = ({keyword, onInputChange}: SearchFormProps) => {
+const SearchForm = ({onSearchFormSubmit}: SearchFormProps) => {
     return(
+        <form
+            onSubmit={onSearchFormSubmit}
+        >
             <input
                 className={styles["searchInput"]}
                 type="text"
-                value={keyword}
-                onChange={onInputChange}
+                name="search"
                 placeholder="Enter keyword"
             />
+            <input type="submit" value="Search"/>
+        </form>
     )
 }
 
