@@ -1,0 +1,13 @@
+.rental{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.rentalImage{
+    object-fit: cover;
+    border-radius: 12px;
+    width: 220px;
+    height: 130px;
+}
