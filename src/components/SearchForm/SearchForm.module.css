@@ -1,3 +1,7 @@
-.searchForm{
-    margin-top: 100px;
+.searchInput{
+    width: 100%;
+    margin-bottom: 20px;
+    border: gray solid 1px;
+    border-radius: 6px;
+    padding: 12px;
 }
