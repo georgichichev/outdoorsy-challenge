@@ -38,7 +38,7 @@ const parseRentalUrl = (id: string, included: RentalsResult["included"]) => {
 function useFetch(url: string) {
     const [rentalsData, setRentalsData] = useState<RentalsState["rentalsData"]>([]);
     const [loading, setLoading] = useState(false);
-    const [error, setError] = useState({});
+    const [error, setError] = useState(false);
 
     useEffect(() => {
         setLoading(true)
@@ -48,7 +48,7 @@ function useFetch(url: string) {
             .then(result => {
                 parseRentalsData(result)
             })
-            .catch(err => setError(err))
+            .catch(() => setError(true))
             .finally(() => setLoading(false));
     }, [url]);
 
