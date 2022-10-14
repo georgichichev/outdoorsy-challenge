@@ -13,6 +13,10 @@ function App() {
 
         const search = formData.get('search');
 
+        if (search === ''){
+            return;
+        }
+
         setKeyword(search);
     }
 
