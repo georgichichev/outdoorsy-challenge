@@ -10,6 +10,7 @@ const SearchForm = ({onSearchFormSubmit}: SearchFormProps) => {
     return(
         <form
             onSubmit={onSearchFormSubmit}
+            className={styles["searchForm"]}
         >
             <input
                 className={styles["searchInput"]}
@@ -17,7 +18,11 @@ const SearchForm = ({onSearchFormSubmit}: SearchFormProps) => {
                 name="search"
                 placeholder="Enter keyword"
             />
-            <input type="submit" value="Search"/>
+            <input
+                type="submit"
+                value="Search"
+                className={styles["searchSubmitInput"]}
+            />
         </form>
     )
 }
