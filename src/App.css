@@ -8,6 +8,7 @@ body{
     background-color: #d9d4d4;
     display: flex;
     justify-content: center;
+    font-family: 'Poppins', sans-serif;
 }
 
 .container{
