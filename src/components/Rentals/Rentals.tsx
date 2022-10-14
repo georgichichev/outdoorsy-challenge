@@ -4,7 +4,7 @@ import Rental from "./Rental/Rental";
 import React from "react";
 import styles from './Rentals.module.css';
 
-interface Keyword{
+interface Keyword {
     keyword: string
 }
 
@@ -15,7 +15,9 @@ const Rentals = ({keyword}: Keyword) => {
 
     return (
         <div className={styles["rentals"]}>
-            { loading && <p>Loading...</p> }
+            {error && <p>'An error occurred. Awkward..'</p>}
+            {loading && <p>Loading...</p>}
+            {rentalsData.length == 0 ? <p>No results.</p> : null}
             {rentalsData.map(x =>
                 <Rental
                     key={x.id}
