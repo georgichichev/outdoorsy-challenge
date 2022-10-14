@@ -8,17 +8,13 @@ interface SearchFormProps{
 
 const SearchForm = ({keyword, onInputChange}: SearchFormProps) => {
     return(
-        <form className={styles["searchForm"]}>
             <input
+                className={styles["searchInput"]}
                 type="text"
                 value={keyword}
                 onChange={onInputChange}
+                placeholder="Enter keyword"
             />
-            <input
-                type="submit"
-                value="Search"
-            />
-        </form>
     )
 }
 
